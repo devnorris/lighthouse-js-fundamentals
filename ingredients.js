@@ -1,16 +1,14 @@
-var ingredients = ["eggs", "milk", "flour", "sugar", "baking soda", "baking powder", "chocolate chips", "bananas"];
-
-// Write a while loop that prints out the contents of ingredients:
-var i = 0;
-while (i < ingredients.length) {
-  console.log(ingredients[i]);
-  i++;
+function range(start, end, step) {
+  var newArray = [];
+  if (start === undefined || end === undefined || step === undefined || start > end || step < 0) {
+    return newArray;
+  } else {
+    for (var i = start; i <= end; i += step) {
+    newArray.push(i);
+  }
+  return newArray;
+ }
 }
-// Write a for loop that prints out the contents of ingredients:
-for (var i = 0; i < ingredients.length; i++) {
-  console.log(ingredients[i]);
-}
-// Write any loop (while or for) that prints out the contents of ingredients backwards:
-for (var i = ingredients.length - 1; i >= 0; i--) {
-  console.log(ingredients[i]);
-}
+console.log(range(0, 10, 2));
+console.log(range(10, 30, 5));
+console.log(range(-5, 2, 3));
